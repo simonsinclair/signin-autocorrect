@@ -58,3 +58,46 @@ body {
   .p-signin__footer {
     border-top: 1px solid #B3B3B3;
   }
+
+// ADDITIONS
+//
+
+  // Change '.field .form-message:after'
+  .field--action .form-message:after {
+    left: unset;
+    right: 24px;
+  }
+
+  // Previously '.field--invalid'
+  .field--action .field__decoration:before {
+    width: 100%;
+  }
+
+  .field--action > .field__input-container > .field__decoration:before {
+    border-color: #3C6DEF;
+  }
+
+  // Previously '.field__error'
+  .field__action + .field__info {
+    margin-top: 8px;
+  }
+
+  // Previously '.form-message--error'
+  .field .form-message--action:after {
+    border-bottom-color: #3C6DEF;
+  }
+
+  .form-message--action {
+    background-color: #3C6DEF;
+  }
+
+// STATE
+//
+
+.field .form-message {
+  display: none;
+}
+
+.field--action .form-message {
+  display: inline-block
+}

@@ -22,10 +22,32 @@
         <div class="p-signin__main">
           <div class="p-signin__control">
             <!-- <div class="field"><div class="field__input-container"><input type="text" name="email" required="" class="field__input"><label class="field__label">Email or username</label><div class="field__decoration"></div></div></div> -->
-            <div class="field field--invalid"><div class="field__input-container"><input type="text" value="something invalid" required="" class="field__input"><label class="field__label">Field label</label><div class="field__decoration"></div></div><div class="field__error form-message form-message--error"><p class="form-message__title">Something resulted in an error.</p><p class="form-message__text">This is what went wrong.</p></div></div>
+
+            <!-- USER -->
+            <!-- <div class="field field--action">
+              <div class="field__input-container">
+                <input type="text" required="" class="field__input" />
+                <label class="field__label">Email or username</label>
+                <div class="field__decoration"></div>
+              </div>
+              <div class="field__action form-message form-message--action">
+                <p class="form-message__text">Did you mean tony@gmail.com? <a href="#">Yes</a> | <a href="#">Dismiss</a></p>
+              </div>
+            </div> -->
+            <div id="js-user" class="field">
+              <div class="field__input-container">
+                <input type="text" required="" class="field__input" />
+                <label class="field__label">Email or username</label>
+                <div class="field__decoration"></div>
+              </div>
+              <div class="field__action form-message form-message--action">
+                <p class="form-message__text">Did you mean tony@gmail.com? <a id="js-primary-action" href="#">Yes</a> | <a id="js-secondary-action" href="#">Dismiss</a></p>
+              </div>
+            </div>
+
           </div>
           <div class="p-signin__control">
-            <div class="field"><div class="field__input-container"><input type="password" required="" class="field__input field__input--password-toggle"><label class="field__label">Password</label><div class="field__decoration"></div></div></div>
+            <div id="js-password" class="field"><div class="field__input-container"><input type="password" required="" class="field__input field__input--password-toggle"><label class="field__label">Password</label><div class="field__decoration"></div></div></div>
           </div>
           <div class="p-signin__control">
             <button type="submit" class="button button--full-width">Sign in</button>
