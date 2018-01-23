@@ -1,3 +1,60 @@
 @import '_id-styleguide';
 
-body {}
+body {
+  background-image: url("img/david-attenborough-16x9-1700x956.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+
+// PROTOTYPE
+//
+
+.p-container {
+  padding: 64px 0 64px 10%;
+}
+  .p-bbc-blocks {
+    width: 84px;
+    margin-bottom: 24px;
+  }
+
+.p-find-out-more,
+.p-footer {
+  background-color: #2D2D2D;
+  height: 52px;
+}
+
+.p-footer {
+  border-top: 1px solid #525252;
+  height: 64px
+}
+
+
+// COMPONENTS
+//
+
+  .p-signin {
+    background-color: #FFF;
+    width: 480px;
+  }
+
+  .p-signin__header,
+  .p-signin__main,
+  .p-signin__footer {
+    padding: 32px;
+  }
+
+  .p-signin__header {}
+
+  .p-signin__main {
+    padding: 0 32px 32px;
+  }
+    .p-signin__control {
+      margin-bottom: 16px
+    }
+
+  .p-signin__footer {
+    border-top: 1px solid #B3B3B3;
+  }
