@@ -36,18 +36,18 @@
             </div> -->
             <div id="js-user" class="field">
               <div class="field__input-container">
-                <input type="text" required="" class="field__input" />
+                <input tabindex="1" type="text" required="" class="field__input" />
                 <label class="field__label">Email or username</label>
                 <div class="field__decoration"></div>
               </div>
               <div class="field__action form-message form-message--action">
-                <p class="form-message__text">Did you mean tony@gmail.com? <a id="js-primary-action" href="#">Yes</a> | <a id="js-secondary-action" href="#">Dismiss</a></p>
+                <p class="form-message__text">Did you mean <span id="js-valid-email"></span>? <a id="js-do-action" href="#">Yes</a> | <a id="js-dismiss-action" href="#">Dismiss</a></p>
               </div>
             </div>
 
           </div>
           <div class="p-signin__control">
-            <div id="js-password" class="field"><div class="field__input-container"><input type="password" required="" class="field__input field__input--password-toggle"><label class="field__label">Password</label><div class="field__decoration"></div></div></div>
+            <div id="js-password" class="field"><div class="field__input-container"><input tabindex="2" type="password" required="" class="field__input field__input--password-toggle"><label class="field__label">Password</label><div class="field__decoration"></div></div></div>
           </div>
           <div class="p-signin__control">
             <button type="submit" class="button button--full-width">Sign in</button>

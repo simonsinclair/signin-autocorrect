@@ -3,52 +3,67 @@
 
   var App = {
 
-    $userElm: '',
-    $userInput: '',
+    validEmail: 'tony.hall@bbc.co.uk',
 
-    actionCompleted: false,
+    $emailSection: '',
+    $emailInput: '',
+
+    actionVisible: false,
 
     init: function() {
-      App.$userElm = $('#js-user');
-      App.$userInput = $('input', App.$userElm);
+      $('#js-valid-email').text(App.validEmail);
 
-      App.$userInput.on('blur', App.checkUserEmail);
+      App.$emailSection = $('#js-user');
+      App.$emailInput   = $('input', App.$emailSection);
 
-      $('#js-primary-action').on('click', App.doPrimaryAction);
-      $('#js-secondary-action').on('click', App.doSecondaryAction);
+      App.$emailInput.on('blur', App.checkUserEmail);
 
-      // If input value changes, be ready to suggest a new action.
-      App.$userInput.on('change', function () { App.actionCompleted = false; });
+      $('#js-do-action').on('click', function(e) {
+        e.preventDefault();
+        App.doAction();
+        App.focusPassword();
+      });
+
+      $('#js-dismiss-action').on('click', function(e) {
+        e.preventDefault();
+        App.dismissAction();
+        App.focusPassword();
+      });
+
+      // If input value changes, reset.
+      App.$emailInput.on('input', function () {
+        if (App.actionVisible) {
+          App.dismissAction();
+        }
+      });
     },
 
     checkUserEmail: function(e) {
-      // If email is incorrect and an action has not been picked:
-      if (App.$userInput.val() !== 'tony@gmail.com' && App.actionCompleted === false) {
-        App.suggestAction();
+      var email = App.$emailInput.val();
+
+      if (
+        email !== App.validEmail &&
+        email !== '' &&
+        App.actionVisible === false
+      ) {
+        App.showAction();
       }
     },
 
-    suggestAction: function() {
-      App.$userElm.addClass('field--action');
-
-      // Select typo.
-      App.$userInput[0].focus();
-      App.$userInput[0].setSelectionRange(5,99);
+    showAction: function() {
+      App.$emailSection.addClass('field--action');
+      App.actionVisible = true;
     },
 
-    doPrimaryAction: function(e) {
-      e.preventDefault();
-      App.$userInput.val('tony@gmail.com');
-      App.$userElm.removeClass('field--action');
-      App.actionCompleted = true;
-      App.focusPassword();
+    doAction: function() {
+      App.$emailInput.val(App.validEmail);
+      App.$emailSection.removeClass('field--action');
+      App.actionVisible = false;
     },
 
-    doSecondaryAction: function(e) {
-      e.preventDefault();
-      App.$userElm.removeClass('field--action');
-      App.actionCompleted = true;
-      App.focusPassword();
+    dismissAction: function() {
+      App.$emailSection.removeClass('field--action');
+      App.actionVisible = false;
     },
 
     focusPassword: function() {
