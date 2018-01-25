@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-GB">
+<html lang="en-GB" class="b-version">
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -30,11 +30,13 @@
                 <div class="field__decoration"></div>
               </div>
               <div class="field__action form-message form-message--info">
-                <div class="field__action__triangle">
+                <!-- <div class="field__action__triangle">
                   <img src="img/triangle.svg" alt="" height="8px" width="16px" />
-                </div>
+                </div> -->
                 <p class="form-message__text">
-                  Did you mean <a id="js-valid-domain" data-action="do" href="#" title="Update email address" class="link"></a>?
+                  Did you mean <span id="js-valid-domain" title="Update email address"></span>?
+                  <a data-action="do" class="link" href="#">Yes</a>
+                  <a data-action="dismiss" class="action__dismiss" href="#">&times;</a>
                 </p>
               </div>
             </div>
