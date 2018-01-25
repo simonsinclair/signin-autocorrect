@@ -3315,8 +3315,7 @@ body {
   border-top: 1px solid #B3B3B3; }
 
 .field--action .form-message:after {
-  left: unset;
-  right: 24px; }
+  top: -8px; }
 
 .field--action .field__decoration:before {
   width: 100%; }
@@ -3327,11 +3326,24 @@ body {
 .field__action + .field__info {
   margin-top: 8px; }
 
+.field__action {
+  position: relative; }
+
+.action__dismiss {
+  color: #3C6DEF;
+  font-weight: bold;
+  position: absolute;
+  right: 24px;
+  text-decoration: none; }
+
+.form-message--info .link {
+  color: #3C6DEF;
+  border-color: #3C6DEF; }
+  .form-message--info .link:hover {
+    color: inherit; }
+
 .field .form-message--action:after {
   border-bottom-color: #3C6DEF; }
-
-.form-message--action {
-  background-color: #3C6DEF; }
 
 .field--action .field__input {
   color: #3C6DEF; }
