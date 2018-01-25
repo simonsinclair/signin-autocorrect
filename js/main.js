@@ -3,7 +3,7 @@
 
   var App = {
 
-    validEmail: 'tony.hall@bbc.co.uk',
+    validDomain: 'bbc.co.uk',
 
     $emailSection: '',
     $emailInput: '',
@@ -11,8 +11,8 @@
     actionVisible: false,
 
     init: function() {
-      alert(`This prototype accepts '${App.validEmail}' as a valid email address.`);
-      $('#js-valid-email').text(`@${App.validEmail.split('@')[1]}`);
+      alert(`I accept "${App.validDomain}" as a valid email domain. Try misspelling it.`);
+      $('#js-valid-email').text(`@${App.validDomain}`);
 
       App.$emailSection = $('#js-user');
       App.$emailInput   = $('input', App.$emailSection);
@@ -40,11 +40,12 @@
     },
 
     checkUserEmail: function(e) {
-      var email = App.$emailInput.val();
+      var email  = App.$emailInput.val();
+      var domain = email.split('@')[1];
 
       if (
-        email !== App.validEmail &&
         email !== '' &&
+        domain !== App.validDomain &&
         App.actionVisible === false
       ) {
         App.showAction();
@@ -57,7 +58,8 @@
     },
 
     doAction: function() {
-      App.$emailInput.val(App.validEmail);
+      var user = App.$emailInput.val().split('@')[0];
+      App.$emailInput.val(`${user}@${App.validDomain}`);
       App.$emailSection.removeClass('field--action');
       App.actionVisible = false;
     },
