@@ -8,6 +8,10 @@ body {
   background-attachment: fixed;
 }
 
+// a {
+//   color: #000;
+// }
+
 
 // PROTOTYPE
 //
@@ -64,8 +68,9 @@ body {
 
   // Change '.field .form-message:after'
   .field--action .form-message:after {
-    left: unset;
-    right: 24px;
+    // left: unset;
+    top: -8px;
+    // right: 24px;
   }
 
   // Previously '.field--invalid'
@@ -82,14 +87,33 @@ body {
     margin-top: 8px;
   }
 
+
+  .field__action {
+    position: relative;
+  }
+  .action__dismiss {
+    color: #3C6DEF;
+    font-weight: bold;
+    position: absolute;
+      right: 24px;
+    text-decoration: none;
+  }
+
+  .form-message--info .link {
+    color: #3C6DEF;
+    border-color: #3C6DEF;
+
+    &:hover {
+      color: inherit;
+    }
+  }
+
   // Previously '.form-message--error'
   .field .form-message--action:after {
     border-bottom-color: #3C6DEF;
   }
 
-  .form-message--action {
-    background-color: #3C6DEF;
-  }
+  .form-message--action {}
 
   .field--action .field__input {
     color: #3C6DEF;
