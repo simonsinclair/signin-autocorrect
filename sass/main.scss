@@ -24,17 +24,6 @@ body {
     margin-bottom: 24px;
   }
 
-.p-find-out-more,
-.p-footer {
-  background-color: #2D2D2D;
-  height: 52px;
-}
-
-.p-footer {
-  border-top: 1px solid #525252;
-  height: 64px
-}
-
 
 // COMPONENTS
 //
@@ -81,9 +70,7 @@ body {
 
   // Change '.field .form-message:after'
   .field--action .form-message:after {
-    // left: unset;
     top: -8px;
-    // right: 24px;
   }
 
   // Previously '.field--invalid'
@@ -101,6 +88,7 @@ body {
   }
 
 
+  // New
   .field__action {
     position: relative;
   }
