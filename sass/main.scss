@@ -70,7 +70,12 @@ body {
 
   // Change '.field .form-message:after'
   .field--action .form-message:after {
+    display: none;
+  }
+
+  .b-version .field--action .form-message:after {
     top: -8px;
+    display: block;
   }
 
   // Previously '.field--invalid'
@@ -92,6 +97,10 @@ body {
   .field__action {
     position: relative;
   }
+    .field__action__triangle {
+      position: absolute;
+        top: -13px;
+    }
   .action__dismiss {
     color: #3C6DEF;
     font-weight: bold;
@@ -116,9 +125,7 @@ body {
 
   .form-message--action {}
 
-  .field--action .field__input {
-    color: #3C6DEF;
-  }
+  .field--action .field__input {}
 
 // STATE
 //

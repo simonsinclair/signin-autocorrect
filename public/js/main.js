@@ -12,20 +12,20 @@
 
     init: function() {
       alert(`I accept "${App.validDomain}" as a valid email domain. Try misspelling it.`);
-      $('#js-valid-email').text(`@${App.validDomain}`);
+      $('#js-valid-domain').text(`@${App.validDomain}`);
 
       App.$emailSection = $('#js-user');
       App.$emailInput   = $('input', App.$emailSection);
 
       App.$emailInput.on('blur', App.checkUserEmail);
 
-      $('#js-do-action').on('click', function(e) {
+      $('[data-action="do"]').on('click', function(e) {
         e.preventDefault();
         App.doAction();
         App.focusPassword();
       });
 
-      $('#js-dismiss-action').on('click', function(e) {
+      $('[data-action="dismiss"]').on('click', function(e) {
         e.preventDefault();
         App.dismissAction();
         App.focusPassword();
