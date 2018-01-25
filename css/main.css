@@ -3287,15 +3287,6 @@ body {
   width: 84px;
   margin-bottom: 24px; }
 
-.p-find-out-more,
-.p-footer {
-  background-color: #2D2D2D;
-  height: 52px; }
-
-.p-footer {
-  border-top: 1px solid #525252;
-  height: 64px; }
-
 .p-signin {
   background-color: #FFF;
   width: 480px; }
@@ -3313,6 +3304,15 @@ body {
 
 .p-signin__footer {
   border-top: 1px solid #B3B3B3; }
+
+.link {
+  color: #000; }
+  .link:hover {
+    color: #005BC8; }
+
+.link--primary {
+  border-bottom-color: #006def;
+  color: #006def; }
 
 .field--action .form-message:after {
   top: -8px; }
