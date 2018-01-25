@@ -11,7 +11,8 @@
     actionVisible: false,
 
     init: function() {
-      $('#js-valid-email').text(App.validEmail);
+      alert(`This prototype accepts '${App.validEmail}' as a valid email address.`);
+      $('#js-valid-email').text(`@${App.validEmail.split('@')[1]}`);
 
       App.$emailSection = $('#js-user');
       App.$emailInput   = $('input', App.$emailSection);
