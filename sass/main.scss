@@ -74,6 +74,11 @@ body {
     }
   }
 
+  .link--primary {
+    border-bottom-color: #006def;
+    color: #006def;
+  }
+
   // Change '.field .form-message:after'
   .field--action .form-message:after {
     // left: unset;
