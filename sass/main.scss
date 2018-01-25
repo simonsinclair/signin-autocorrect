@@ -66,6 +66,14 @@ body {
 // ADDITIONS
 //
 
+  .link {
+    color: #000;
+
+    &:hover {
+      color: #005BC8;
+    }
+  }
+
   // Change '.field .form-message:after'
   .field--action .form-message:after {
     // left: unset;
