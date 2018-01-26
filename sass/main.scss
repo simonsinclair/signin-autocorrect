@@ -1,5 +1,8 @@
 @import '_id-styleguide';
 
+$colBrand:      #3C6DEF;
+$colBrandHover: #005BC8;
+
 body {
   background-image: url("img/david-attenborough-16x9-1700x956.jpg");
   background-position: center center;
@@ -7,10 +10,6 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
-
-// a {
-//   color: #000;
-// }
 
 
 // PROTOTYPE
@@ -59,13 +58,13 @@ body {
     color: #000;
 
     &:hover {
-      color: #005BC8;
+      color: $colBrandHover;
     }
   }
 
   .link--primary {
-    border-bottom-color: #006def;
-    color: #006def;
+    border-bottom-color: $colBrand;
+    color: $colBrand;
   }
 
   // Change '.field .form-message:after'
@@ -84,7 +83,7 @@ body {
   }
 
   .field--action > .field__input-container > .field__decoration:before {
-    border-color: #3C6DEF;
+    border-color: $colBrand;
   }
 
   // Previously '.field__error'
@@ -102,16 +101,22 @@ body {
         top: -13px;
     }
   .action__dismiss {
-    color: #3C6DEF;
+    color: $colBrand;
     font-weight: bold;
     position: absolute;
-      right: 24px;
+      top: 17px; right: 20px;
     text-decoration: none;
+
+    svg {
+      fill: $colBrand;
+      height: 12px;
+      width: 12px;
+    }
   }
 
   .form-message--info .link {
-    color: #3C6DEF;
-    border-color: #3C6DEF;
+    color: $colBrand;
+    border-color: $colBrand;
 
     &:hover {
       color: inherit;
@@ -120,7 +125,7 @@ body {
 
   // Previously '.form-message--error'
   .field .form-message--action:after {
-    border-bottom-color: #3C6DEF;
+    border-bottom-color: $colBrand;
   }
 
   .form-message--action {}
