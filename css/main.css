@@ -3314,17 +3314,13 @@ body {
   border-bottom-color: #3C6DEF;
   color: #3C6DEF; }
 
-.field--action .form-message:after {
-  display: none; }
-
 .b-version .field--action .form-message:after {
-  top: -8px;
-  display: block; }
+  top: -8px; }
 
 .field--action .field__decoration:before {
   width: 100%; }
 
-.field--action > .field__input-container > .field__decoration:before {
+.b-version .field--action > .field__input-container > .field__decoration:before {
   border-color: #3C6DEF; }
 
 .field__action + .field__info {
@@ -3348,6 +3344,17 @@ body {
     fill: #3C6DEF;
     height: 12px;
     width: 12px; }
+
+.field .form-message--status {
+  background-color: #EEE; }
+  .field .form-message--status::after {
+    border-bottom-color: #EEE; }
+
+.form-message--status .link {
+  border-bottom-color: #000;
+  color: #000; }
+  .form-message--status .link:hover {
+    color: inherit; }
 
 .form-message--info .link {
   color: #3C6DEF;
