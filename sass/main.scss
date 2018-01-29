@@ -54,6 +54,7 @@ body {
 // ADDITIONS
 //
 
+  // Default link styles.
   .link {
     color: #000;
 
@@ -68,13 +69,10 @@ body {
   }
 
   // Change '.field .form-message:after'
-  .field--action .form-message:after {
-    display: none;
-  }
+  .field--action .form-message:after {}
 
   .b-version .field--action .form-message:after {
     top: -8px;
-    display: block;
   }
 
   // Previously '.field--invalid'
@@ -82,7 +80,7 @@ body {
     width: 100%;
   }
 
-  .field--action > .field__input-container > .field__decoration:before {
+  .b-version .field--action > .field__input-container > .field__decoration:before {
     border-color: $colBrand;
   }
 
@@ -92,7 +90,7 @@ body {
   }
 
 
-  // New
+  // New Field component.
   .field__action {
     position: relative;
   }
@@ -114,6 +112,29 @@ body {
     }
   }
 
+  // Overwrite.
+  // - Increase background tint.
+  .field .form-message--status {
+    background-color: #EEE;
+
+    &::after {
+      border-bottom-color: #EEE;
+    }
+  }
+
+  // Add link style.
+  // Version A.
+  .form-message--status .link {
+    border-bottom-color: #000;
+    color: #000;
+
+    &:hover {
+      color: inherit;
+    }
+  }
+
+  // Add link style.
+  // - Version B uses 'info' instead of 'status'.
   .form-message--info .link {
     color: $colBrand;
     border-color: $colBrand;
@@ -131,6 +152,7 @@ body {
   .form-message--action {}
 
   .field--action .field__input {}
+
 
 // STATE
 //
